@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Sobre</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" th:href="@{/css/open-iconic-bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/animate.css}">
+    
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" th:href="@{/css/aos.css}">
+
+    <link rel="stylesheet" th:href="@{/css/ionicons.min.css}">
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap-datepicker.css}">
+    <link rel="stylesheet" th:href="@{/css/jquery.timepicker.css}">
+
+    
+    <link rel="stylesheet" th:href="@{/css/flaticon.css}">
+    <link rel="stylesheet" th:href="@{/css/icomoon.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+  <header>
+
+   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand text-dark font-weight-bold" href="index.html">EduAção</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a th:href="@{/}" class="nav-link text-dark">Home</a></li>
+          <li class="nav-item active"><a th:href="@{/sobre}" class="nav-link text-dark">Sobre</a></li>
+          <li class="nav-item"><a th:href="@{/causas}" class="nav-link text-dark">Causas</a></li>
+          <li class="nav-item"><a th:href="@{/galeria}" class="nav-link text-dark">Gallery</a></li>
+          <li class="nav-item"><a th:href="@{/contato}" class="nav-link text-dark">Contato</a></li>
+          <li class="nav-item"><a class="nav-link active text-dark" th:href="@{/login}"><i class="bi bi-person-circle"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+	<div class="hero-wrap" style="background-image: url('images/bg_7.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Sobre</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Sobre Nós</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row d-flex">
+    			<div class="col-md-6 d-flex ftco-animate">
+    				<div class="img img-about align-self-stretch" style="background-image: url(images/bg_3.jpg); width: 100%;"></div>
+    			</div>
+    			<div class="col-md-6 pl-md-5 ftco-animate">
+    				<h2 class="mb-4">Bem Vindo ao EduAção</h2>
+    				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ducimus fugit molestiae ex voluptas eveniet odio ea, est numquam maxime veritatis distinctio tempore enim voluptatum unde nulla eius! Temporibus, saepe.</p>
+    				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut cupiditate animi illo nesciunt maiores itaque repellat culpa repudiandae officiis. Maiores tempora dicta alias mollitia dolorem sequi asperiores similique voluptates voluptatibus?</p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-counter ftco-intro" id="section-counter">
+    	<div class="container">
+    		<div class="row no-gutters">
+    			<div class="col-md-5 d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 color-1 align-items-stretch">
+              <div class="text">
+              	<span>Crianças Matriculadas na Rede Pública em 2019</span>
+                <strong class="number" data-number="3530000">0</strong>
+                <span>A maioria delas precisa da sua ajuda pra comprar material escolar</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 color-2 align-items-stretch">
+              <div class="text">
+              	<h3 class="mb-4">Doe Material Escola</h3>
+              	<p>Lápis, Borrachas, Cadernos... Elas precisam do básico.</p>
+              	<p><a th:href="@{/causas}" class="btn btn-white px-3 py-2 mt-2">Doe Agora</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 color-3 align-items-stretch">
+              <div class="text">
+              	<h3 class="mb-4">Seja Voluntario</h3>
+              	<p>Depois das pandemia, muitas delas precisam de reforço escolar</p>
+              	<p><a th:href="@{/causas}" class="btn btn-white px-3 py-2 mt-2">Seja um Voluntaior</a></p>
+              </div>
+            </div>
+          </div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row">
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 d-flex services p-3 py-4 d-block">
+              <div class="icon d-flex mb-3"><span class="flaticon-donation-1"></span></div>
+              <div class="media-body pl-4">
+                <h3 class="heading">Faça um Doação</h3>
+                <p>Doe para as instituições que ajudam crianças e adolescentes que não tem condições de comprar material escolar </p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 d-flex services p-3 py-4 d-block">
+              <div class="icon d-flex mb-3"><span class="flaticon-charity"></span></div>
+              <div class="media-body pl-4">
+                <h3 class="heading">Seja um Volutário</h3>
+                <p>Muitas crianças precisam de reforço escolar no contraturno e as instituições tem pessoal limitado para atendê-las. Com mais "professores" mais "alunos".</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 d-flex services p-3 py-4 d-block">
+              <div class="icon d-flex mb-3"><span class="flaticon-donation"></span></div>
+              <div class="media-body pl-4">
+                <h3 class="heading">Doe de Longe</h3>
+                <p>Escolha uma instituição e escolha o material na nossa loja que enviamos sua doação de qualquer lugar do mundo!</p>
+              </div>
+            </div>    
+          </div>
+        </div>
+    	</div>
+    </section>
+		
+
+    <footer class="ftco-footer ftco-section img">
+    	<footer class="text-center text-lg-start text-muted">
+
+        <!-- Inicio do Bloco 01-->
+        <section class="d-flex justify-content-center text-white justify-content-lg-between p-4"
+          style="background-color: #252525; border-bottom: 1px solid #DB4F1E">
+          <!--Inicio das Midias -->
+          <div class="me-5 d-none d-lg-block">
+            <span>Conecte-se conosco nas redes sociais:</span>
+          </div>
+          <!--Fim das Midias -->
+    
+          <!-- Inicio das Logos -->
+          <div>
+            <a href="https://www.facebook.com" class="btn-close-white me-4 m-4">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com" class="btn-close-white me-4 m-4">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.google.com" class="btn-close-white me-4 m-4">
+              <i class="bi bi-google"></i>
+            </a>
+            <a href="https://www.instagram.com" class="btn-close-white m-4 me-4">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://br.linkedin.com" class="btn-close-white m-4 me-4">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com" class="btn-close-white m-4 me-4">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+    
+          <!--Fim das Logos -->
+        </section>
+        <!--Fim do Bloco 01 -->
+    
+        <!-- Inicio do Bloco 02-->
+        <section class="text-white" style="background-color: #252525 ;">
+          <div class="container text-center text-md-start mt-0">
+            <!--  row -->
+            <div class="row pt-5">
+              <!-- col 01-->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  <i class="fas fa-gem me-3"></i>EduAção
+                </h6>
+                <hr class="mt-2 mb-3 w-100"
+                  style="margin:auto; box-sizing: border-box; border: 1px solid #DB4F1E; background-color: #DB4F1E ;">
+                <p>
+                  Venha ajudar e fazer a diferença na educação e no futuro dessas crianças e adolescentes.
+                </p>
+              </div>
+              <!-- col 01 -->
+    
+              <!-- col 02 -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+    
+                <h6 class="text-uppercase fw-bold mb-4">
+                  LINKS
+                </h6>
+                <hr class="mt-2 mb-3 w-100"  style="margin:auto; box-sizing: border-box; border: 1px solid #DB4F1E ; background-color: #DB4F1E  ;">
+                <p>
+                  <a href="#!" class="text-reset">Parceiros</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Doe</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">ONGs</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Destaques</a>
+                </p>
+              </div>
+              <!-- col 02 -->
+    
+              <!-- col 03 -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+    
+                <h6 class="text-uppercase fw-bold mb-4">
+                  NEWS LETTER
+                </h6>
+                <hr class="mt-2 mb-3 w-100"
+                  style="margin:auto; box-sizing: border-box; border: 1px solid #DB4F1E ; background-color: #DB4F1E  ;">
+                <p>Assine nossa newsletter semanal para receber notícias e atualizações</p>
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="Recipient's username"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  <span style="background-color: #DB4F1E ; font-weight: bolder;" class=" w-auto input-group-text text-bolder"
+                    id="basic-addon2">@</span>
+                </div>
+              </div>
+              <!-- col 03 -->
+    
+              <!-- col 04 -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+    
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Contato
+                </h6>
+                <hr class="mt-2 mb-3 w-100"
+                  style="margin:auto; box-sizing: border-box; border: 1px solid #DB4F1E ; background-color: #DB4F1E  ;">
+                <p><i class="bi bi-house me-3"></i> Brasil -</p>
+                <p>
+                  <i class="bi bi-envelope me-3"></i>
+                  EduAcao@example.com
+                </p>
+                <p><i class="bi bi-phone me-3"></i> +55 85994247315</p>
+                <p><i class="bi bi-phone me-3"></i> +55 85994247315</p>
+              </div>
+              <!-- col 04 -->
+            </div>
+            <!-- row -->
+          </div>
+        </section>
+        <!-- Fim do Bloco 02-->
+    
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: #252525;">
+          © 2022 Copyright:
+          <a class="text-reset fw-bold" href=""> Squad 26</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
