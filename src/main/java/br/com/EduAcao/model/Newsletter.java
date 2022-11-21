@@ -1,18 +1,12 @@
 package br.com.EduAcao.model;
 
-import java.sql.Date;
-import java.time.LocalDate;
-import java.util.Calendar;
+
 import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 
 

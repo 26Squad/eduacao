@@ -44,7 +44,8 @@ public class DoadorController {
 	        return modelAndView;
 	    }
 
-	    @GetMapping("/{id}")
+	    @SuppressWarnings("deprecation")
+		@GetMapping("/{id}")
 	    public ModelAndView detalhes(@PathVariable Long id) {
 	        ModelAndView modelAndView = new ModelAndView("doador/detalhes");
 
@@ -63,7 +64,8 @@ public class DoadorController {
 	        return modelAndView;
 	    }
 
-	    @GetMapping("/{id}/editar")
+	    @SuppressWarnings("deprecation")
+		@GetMapping("/{id}/editar")
 	    public ModelAndView editar(@PathVariable Long id) {
 	        ModelAndView modelAndView = new ModelAndView("doador/formulario");
 
@@ -85,7 +87,8 @@ public class DoadorController {
 
 	    @PostMapping("/{id}/editar")
 	    public String editar(Doador doador, @PathVariable Long id) {
-	        String senhaAtual = doadorRepositorio.getOne(id).getSenha();
+	        @SuppressWarnings("deprecation")
+			String senhaAtual = doadorRepositorio.getOne(id).getSenha();
 	        doador.setSenha(senhaAtual);
 
 	        doadorRepositorio.save(doador);

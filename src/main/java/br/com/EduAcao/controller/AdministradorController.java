@@ -14,7 +14,7 @@ import br.com.EduAcao.model.UF;
 import br.com.EduAcao.repositorios.AdministradorRepositorio;
 import br.com.EduAcao.utils.SenhaUtils;
 
-import br.com.EduAcao.repositorios.DoadorRepositorio;
+
 
 
 
@@ -45,7 +45,8 @@ public class AdministradorController {
 	        return modelAndView;
 	    }
 
-	    @GetMapping("/{id}")
+	    @SuppressWarnings("deprecation")
+		@GetMapping("/{id}")
 	    public ModelAndView detalhes(@PathVariable Long id) {
 	        ModelAndView modelAndView = new ModelAndView("administrador/detalhes");
 
@@ -64,7 +65,8 @@ public class AdministradorController {
 	        return modelAndView;
 	    }
 
-	    @GetMapping("/{id}/editar")
+	    @SuppressWarnings("deprecation")
+		@GetMapping("/{id}/editar")
 	    public ModelAndView editar(@PathVariable Long id) {
 	        ModelAndView modelAndView = new ModelAndView("administrador/formulario");
 
@@ -86,7 +88,8 @@ public class AdministradorController {
 
 	    @PostMapping("/{id}/editar")
 	    public String editar(Administrador administrador, @PathVariable Long id) {
-	        String senhaAtual = administradorRepositorio.getOne(id).getSenha();
+	        @SuppressWarnings("deprecation")
+			String senhaAtual = administradorRepositorio.getOne(id).getSenha();
 	        administrador.setSenha(senhaAtual);
 
 	        administradorRepositorio.save(administrador);

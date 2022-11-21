@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.com.EduAcao.model.Administrador;
+
 import br.com.EduAcao.model.Causa;
 import br.com.EduAcao.model.Newsletter;
 import br.com.EduAcao.model.UF;
@@ -96,7 +96,8 @@ public class CausaController {
  
  }
 
-    @GetMapping("/{id}")
+    @SuppressWarnings("deprecation")
+	@GetMapping("/{id}")
     public ModelAndView detalhes(@PathVariable Long id) {
         ModelAndView modelAndView = new ModelAndView("/causasDetalhes");
 
@@ -116,7 +117,8 @@ public class CausaController {
 	 */
     
 
-    @GetMapping("/{id}/editar")
+    @SuppressWarnings("deprecation")
+	@GetMapping("/{id}/editar")
     public ModelAndView editar(@PathVariable Long id) {
         ModelAndView modelAndView = new ModelAndView("/cadastrar");
 
@@ -159,7 +161,8 @@ public class CausaController {
 
     @PostMapping("/{id}/editar")
     public String editar(Causa causa, @PathVariable Long id) {
-        String senhaAtual = causaRepositorio.getOne(id).getSenha();
+        @SuppressWarnings("deprecation")
+		String senhaAtual = causaRepositorio.getOne(id).getSenha();
         causa.setSenha(senhaAtual);
 
         causaRepositorio.save(causa);
@@ -170,6 +173,7 @@ public class CausaController {
     @GetMapping("/imagem1/{id}")
 	@ResponseBody
 	public byte[] exibirImagen1(@PathVariable("id") Long id) {
+		@SuppressWarnings("deprecation")
 		Causa causa = this.causaRepositorio.getOne(id);
 		return causa.getImagem1();
 		
@@ -177,6 +181,7 @@ public class CausaController {
     @GetMapping("/imagem2/{id}")
 	@ResponseBody
 	public byte[] exibirImagens(@PathVariable("id") Long id) {
+		@SuppressWarnings("deprecation")
 		Causa causa = this.causaRepositorio.getOne(id);
 		return causa.getImagem2();
 		
