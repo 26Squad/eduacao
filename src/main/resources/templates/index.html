@@ -333,12 +333,12 @@
                   style="margin:auto; box-sizing: border-box; border: 1px solid #DB4F1E ; background-color: #DB4F1E  ;">
                 <p>Assine nossa newsletter semanal para receber notícias e atualizações</p>
                 <div class="input-group mb-3">
-                <form method="POST" th:object="${newsletter}">
+                <form>
                 
                 <div class="row">
 								<div class="col-md-10 col-sm-11">
 									<div class="form-group">
-										 <input type="text" class="form-control" placeholder="Email" th:field="*{emailNews}"
+										 <input type="text" class="form-control" placeholder="Email" 
                     							aria-label="Email" aria-describedby="basic-addon2">
 									</div>
 								</div>
