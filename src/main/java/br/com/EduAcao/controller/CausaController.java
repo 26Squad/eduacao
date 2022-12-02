@@ -86,48 +86,11 @@ public class CausaController {
         return modelAndView;
     }
     
-    @PostMapping("/")
-    public String cadastrar( Newsletter newsletter) {
-    	 ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("newsletter", new Newsletter());
-        newsletterRepositorio.save(newsletter);
+   
 
-        return "redirect:/";
-    }
+   
 
-    @PostMapping("/cadastrar")
-	public ModelAndView cadastrarImagem(Causa causa, @RequestParam ("file") MultipartFile file) throws IOException {
-    	String senhaEncriptada = SenhaUtils.encode(causa.getSenha());
-    	
-		try {
-			causa.setImagem1(file.getBytes());
-			
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		ModelAndView modelAndView = new ModelAndView("redirect:/causasDetalhes");
-		
-		modelAndView.addObject("causa", new Causa());
-        modelAndView.addObject("ufs", UF.values());
-		causa.setSenha(senhaEncriptada);
-        causaRepositorio.save(causa);
-		
-
-		return modelAndView;
-	}
-
-    @PostMapping("/{id}/editar")
-    public String editar(Causa causa, @PathVariable Long id) {
-        @SuppressWarnings("deprecation")
-		String senhaAtual = causaRepositorio.getOne(id).getSenha();
-        causa.setSenha(senhaAtual);
-
-        causaRepositorio.save(causa);
-
-        return "redirect:/Causa";
-    }
-
+   
     @GetMapping("/imagem1/{id}")
 	@ResponseBody
 	public byte[] exibirImagen1(@PathVariable("id") Long id) {
