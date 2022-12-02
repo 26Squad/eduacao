@@ -24,7 +24,7 @@ import br.com.EduAcao.utils.SenhaUtils;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/causas")
 public class CausaController {
 
     @Autowired
@@ -34,8 +34,8 @@ public class CausaController {
     private NewsletterRepositorio newsletterRepositorio;
     
     @GetMapping
-    public ModelAndView home(Newsletter newsletter) {
-        ModelAndView modelAndView = new ModelAndView("/index");
+    public ModelAndView home() {
+        ModelAndView modelAndView = new ModelAndView("/causas");
 
         return modelAndView;
     }
@@ -47,22 +47,6 @@ public class CausaController {
       return modelAndView;
     }
 
- @GetMapping("/sobre")
-    public ModelAndView sobre(Newsletter newsletter) {
-        ModelAndView modelAndView = new ModelAndView("/sobre");
-
-
-        return modelAndView;
-    }
- 
- @GetMapping("/causas")
-   public ModelAndView causas(Newsletter newsletter) {
-       ModelAndView modelAndView = new ModelAndView("/causas");
-
-
-       return modelAndView;
-   }
- 
  @GetMapping("/causasDetalhes")
     public ModelAndView causasDetalhes(Newsletter newsletter) {
         ModelAndView modelAndView = new ModelAndView("/causasDetalhes");
@@ -70,22 +54,7 @@ public class CausaController {
 
         return modelAndView;
     }
- 
- @GetMapping("/contato")
-    public ModelAndView contato(Newsletter newsletter) {
-        ModelAndView modelAndView = new ModelAndView("/contato");
 
-
-        return modelAndView;
-    }
- 
- @GetMapping("/galeria")
-    public ModelAndView promocoes(Newsletter newsletter) {
-        ModelAndView modelAndView = new ModelAndView("/galeria");
-
-
-        return modelAndView;
-    }
  
  @GetMapping("/login")
     public ModelAndView login(Newsletter newsletter) {
@@ -105,17 +74,6 @@ public class CausaController {
 
         return modelAndView;
     }
-
-	/*
-	 * @GetMapping("/cadastrar") public ModelAndView cadastrar() { ModelAndView
-	 * modelAndView = new ModelAndView("/cadastrar");
-	 * 
-	 * modelAndView.addObject("Causa", new Causa()); modelAndView.addObject("ufs",
-	 * UF.values());
-	 * 
-	 * return modelAndView; }
-	 */
-    
 
     @SuppressWarnings("deprecation")
 	@GetMapping("/{id}/editar")
