@@ -27,11 +27,7 @@ import br.com.EduAcao.utils.SenhaUtils;
 @RequestMapping("/causas")
 public class CausaController {
 
-    @Autowired
-    private CausaRepositorio causaRepositorio;
-    
-    @Autowired
-    private NewsletterRepositorio newsletterRepositorio;
+ 
     
     @GetMapping
     public ModelAndView home() {
@@ -65,53 +61,13 @@ public class CausaController {
  
  }
 
-    @SuppressWarnings("deprecation")
-	@GetMapping("/{id}")
-    public ModelAndView detalhes(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("/causasDetalhes");
 
-        modelAndView.addObject("Causa", causaRepositorio.getOne(id));
-
-        return modelAndView;
-    }
-
-    @SuppressWarnings("deprecation")
-	@GetMapping("/{id}/editar")
-    public ModelAndView editar(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("/cadastrar");
-
-        modelAndView.addObject("Causa", causaRepositorio.getOne(id));
-        modelAndView.addObject("ufs", UF.values());
-
-        return modelAndView;
-    }
     
    
 
    
 
    
-    @GetMapping("/imagem1/{id}")
-	@ResponseBody
-	public byte[] exibirImagen1(@PathVariable("id") Long id) {
-		@SuppressWarnings("deprecation")
-		Causa causa = this.causaRepositorio.getOne(id);
-		return causa.getImagem1();
-		
-    }
-    @GetMapping("/imagem2/{id}")
-	@ResponseBody
-	public byte[] exibirImagens(@PathVariable("id") Long id) {
-		@SuppressWarnings("deprecation")
-		Causa causa = this.causaRepositorio.getOne(id);
-		return causa.getImagem2();
-		
-    }
-    @GetMapping("/{id}/excluir")
-    public String excluir(@PathVariable Long id) {
-        causaRepositorio.deleteById(id);
 
-        return "redirect:/Causa";
-    }
     
 }
